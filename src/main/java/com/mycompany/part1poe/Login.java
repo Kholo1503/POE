@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.registration;
+package com.mycompany.part1poe;
 import java.util.regex.Pattern;
 /**
  *
@@ -57,6 +57,7 @@ class Login {
     Found = true;
     //message feeback for if Password captured or not
     System.out.println("Password successfully captured");
+    return true;
     }else{
     //changed to false
     Found = false;
@@ -67,20 +68,19 @@ class Login {
    // System.out.println("Username or password incorrect, please try again"); 
        return false;
      }
-    return Found;
     }
     
-public String registerUser( String username, String password, String name, String surname){
+public String registerUser( String Username, String Password, String name, String surname){
         this.name = name;
         this.surname = surname;
-        if(!CheckUsername(username)){
+        if(!CheckUsername(Username)){
           return "Username incorrectly formatted.";
         }
-        else if(!checkPasswordComplexity(password)){
+        else if(!checkPasswordComplexity(Password)){
            return "The password does not meet the complexity.";
         }else{
-            this.Username = username;
-            this.Password = password;
+            this.Username = Username;
+            this.Password = Password;
         return "The user has been registered!";
         }
       }

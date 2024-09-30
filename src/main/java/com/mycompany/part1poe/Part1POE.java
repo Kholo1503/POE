@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
 
-package com.mycompany.registration;
+package com.mycompany.part1poe;
 import java.util.*;
 /**
  *
@@ -51,12 +51,12 @@ System.out.println("Create Password");
 Password = sc.next();
 
 //User registeration
-String registration = loginSystem.registerUser(name, surname, Username, Password);
+String registration = loginSystem.registerUser(Username, Password, name, surname);
 System.out.println(registration);
 
 
 //when registration is succesfull, it continues to login
-if (registration.equals("User registration was successful!")){
+if (registration.equals("The user has been registered!")){
     System.out.println("______________________________________________");
     System.out.println("-------LOGIN TO YOUR REGISTERED ACCOUNT-------");
     System.out.println("______________________________________________");
